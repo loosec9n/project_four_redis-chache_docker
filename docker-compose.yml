@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+      web:
+          build: .
+          ports:
+            - 8080:8080
+          environment:
+            LOCAL: "true"
+            PORT: 8080
+            REDIS_URL: redis
+      redis:
+          image: redis:alpine
